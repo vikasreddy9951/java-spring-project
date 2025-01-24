@@ -1,5 +1,4 @@
 FROM openjdk:17-jdk-slim
-VOLUME /app
-COPY target/JavaSpringProject-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
+ADD target/java-spring-project.jar java-spring-project.jar
+ENTRYPOINT ["java","-jar","/java-spring-project.jar"]
