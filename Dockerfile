@@ -1,4 +1,5 @@
 FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY target/java-spring-project.jar app.jar
 EXPOSE 8080
-ADD target/java-spring-project.jar java-spring-project.jar
-ENTRYPOINT ["java","-jar","/java-spring-project.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
